@@ -103,8 +103,8 @@ GameObject:
   - component: {fileID: 3451219848662383361}
   - component: {fileID: 3702520986800272285}
   m_Layer: 0
-  m_Name: Prop_Barrier02
-  m_TagString: Untagged
+  m_Name: Obstacle
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,3 +185,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd51f052cedd2d438a46d3d71f8f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveLeft
+  speed: 15

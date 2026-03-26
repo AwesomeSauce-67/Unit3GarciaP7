@@ -1926,7 +1926,7 @@ GameObject:
   - component: {fileID: 8635767131859684527}
   m_Layer: 0
   m_Name: SimplePeople_Man_Business_Brown
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2044,6 +2044,7 @@ MonoBehaviour:
   jumpForce: 10
   gravityModifier: 0
   isOnGround: 1
+  gameOver: 0
 --- !u!1 &7775358537881689944
 GameObject:
   m_ObjectHideFlags: 0
