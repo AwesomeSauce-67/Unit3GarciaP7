@@ -275,7 +275,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae8dec856b3c4a4cbb5ab271eed7e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  obstaclePrefabs: []
+  obstaclePrefabs:
+  - {fileID: 2133242030497733797, guid: 85443f9d22eb4494b85be84c654cb314, type: 3}
+  - {fileID: 5603898372144694661, guid: 0792d40e317542d49987c18964f49757, type: 3}
+  - {fileID: 6781543127799293144, guid: 2fd641759964837478fe9ed1ed58f58b, type: 3}
+  - {fileID: 8037023585709241446, guid: 3a86cf059a55f854caeea67d9dafae9b, type: 3}
+  - {fileID: 4137426960932414514, guid: db26f6ce8a2794c4ba4a7999d3724c44, type: 3}
   startDelay: 2
   repeatRate: 2
 --- !u!4 &488584986
@@ -528,6 +533,37 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &666763550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 666763551}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &666763551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666763550}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &719829686 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1438565936, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
@@ -739,6 +775,51 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 112.79999, y: 18.781641, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1114728479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1114728481}
+  - component: {fileID: 1114728480}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1114728480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114728479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d70222a309a2444fbd3530a160d7244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  score: 0
+--- !u!4 &1114728481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114728479}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.53628, y: 0.95694, z: 3.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1269258041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1102,6 +1183,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8635767131859684527, guid: 1f586ab35c0395b4b93034293b420b80, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635767131859684527, guid: 1f586ab35c0395b4b93034293b420b80, type: 3}
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 8300000, guid: 0f7d0b7c3397f4dac91f20e8a77d2d57, type: 3}
@@ -1114,8 +1199,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 719829686}
     - target: {fileID: 8635767131859684527, guid: 1f586ab35c0395b4b93034293b420b80, type: 3}
+      propertyPath: doubleJumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635767131859684527, guid: 1f586ab35c0395b4b93034293b420b80, type: 3}
       propertyPath: gravityModifier
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8635767131859684527, guid: 1f586ab35c0395b4b93034293b420b80, type: 3}
       propertyPath: explosionParticle
@@ -1145,3 +1234,5 @@ SceneRoots:
   - {fileID: 835818921}
   - {fileID: 3371026894099183554}
   - {fileID: 488584986}
+  - {fileID: 1114728481}
+  - {fileID: 666763551}
